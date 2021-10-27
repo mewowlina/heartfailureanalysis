@@ -35,22 +35,22 @@ if option == "Homepage":
              "one or more risk factors such as hypertension, diabetes, hyperlipidaemia or already established disease) "
              "need early detection and management wherein a machine learning model can be of great help.")
 
-    with st.container():
-        st.header("Overview")
-        age_male = male_data["Age"]
-        age_female = female_data["Age"]
 
-        fig1, ax1 = plt.subplots()
-        colors = ["#94D2F8", "#FE93BA"]
-        labels = ["Male", "Female"]
-        ax1.hist([age_male, age_female], color=colors, label=labels)
+    st.header("Overview")
+    age_male = male_data["Age"]
+    age_female = female_data["Age"]
 
-        ax1.legend()
-        ax1.set_ylabel("Number of patients")
-        ax1.set_xlabel("Age")
-        ax1.set_title("Number of patients diagnosed with heart disease")
+    fig1, ax1 = plt.subplots()
+    colors = ["#94D2F8", "#FE93BA"]
+    labels = ["Male", "Female"]
+    ax1.hist([age_male, age_female], color=colors, label=labels)
 
-        st.write(fig1)
+    ax1.legend()
+    ax1.set_ylabel("Number of patients")
+    ax1.set_xlabel("Age")
+    ax1.set_title("Number of patients diagnosed with heart disease")
+
+    st.write(fig1)
 
 
 elif option == "Predict by Resting Blood Pressure":
